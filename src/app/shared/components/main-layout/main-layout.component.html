@@ -1,0 +1,20 @@
+<div
+  class="container"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  [style.padding-left.px]="20"
+  fxLayoutGap="20px grid"
+  fxLayoutGap.md="10px"
+  fxLayoutGap.sm="5px"
+  fxLayoutGap.xs="0"
+  fxFlexFill
+>
+  <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="40%" class="section1">
+    <pc-users-page class="section1"></pc-users-page>
+  </div>
+  <div fxFlex="67%" fxFlex.sm="60%" class="section2">
+    <pc-nav-toggle></pc-nav-toggle>
+    <router-outlet></router-outlet>
+  </div>
+</div>

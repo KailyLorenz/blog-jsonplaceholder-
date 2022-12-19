@@ -1,0 +1,16 @@
+<div class="container">
+  <ul>
+    <li role="listitem" *ngFor="let user of users$ | async">
+      <div
+        class="card"
+        (click)="openPosts(user)"
+        [ngClass]="user.countPosts < 10 ? 'colorLessTen' : 'colorCard'"
+      >
+        <p>{{ user.name }}</p>
+        <p><span>Username: </span>{{ user.username }}</p>
+        <p><span>Email: </span>{{ user.email }}</p>
+        <p><span>Website: </span>{{ user.website }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

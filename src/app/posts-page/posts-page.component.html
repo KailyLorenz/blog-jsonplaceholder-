@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="search">
+    <mat-form-field appearance="fill">
+      <mat-label>Search post...</mat-label>
+      <input matInput [(ngModel)]="searchPost" />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <div>
+    <ul class="list">
+      <li role="listitem" *ngFor="let post of posts | searchPosts : searchPost;">
+        <div class="post-card">
+          <H4>{{ post.title }}</H4>
+          <p>{{ post.body }}</p>
+          <button
+            mat-raised-button
+            (click)="openDialog('100ms', '100ms', post)"
+          >
+            remove
+          </button>
+          <hr class="hr-line" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

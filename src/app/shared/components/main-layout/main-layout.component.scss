@@ -1,0 +1,9 @@
+/* 768px - 991px */
+@media (max-width: 767px) {
+  .container {
+    font-size: small;
+    .section1 {
+      overflow-y: scroll;
+    }
+  }
+}

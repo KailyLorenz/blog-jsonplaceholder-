@@ -1,0 +1,11 @@
+h1{
+  text-align: center;
+}
+div.actions {
+  display: flex;
+  justify-content: space-around;
+  button {
+    background-color: #7E57C2;
+    color: #FFF;
+  }
+}
